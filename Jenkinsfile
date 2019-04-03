@@ -13,7 +13,7 @@ pipeline {
 	script {
 	def tfHome = tool name: 'terraform'
 //	env.PATH = "${tfHome}"
-	sh '$tfHome -version'
+	sh './terraform -version'
 	}
        }
      } 
