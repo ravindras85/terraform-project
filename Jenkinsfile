@@ -13,9 +13,7 @@ pipeline {
 	script {
 	def tfHome = tool name: 'terraform'
 //	env.PATH = "${tfHome}"
-	echo 'Checking terraform installation' + env.PATH
- 	}
-	sh 'terraform -version'
+	sh '$tfHome -version'
 	}
        }
      } 
