@@ -4,7 +4,7 @@ pipeline {
  stages {
    stage('checkout') {
    	steps {
-	git url: {'https://github.com/ravindras85/terraform-project.git'}
+	git url: 'https://github.com/ravindras85/terraform-project.git'
        }
       }
 
@@ -12,7 +12,8 @@ pipeline {
 	steps {
 	script {
 	def tfHome = tool name: 'Terraform'
-	env.PATH = “${tfHome}:${env.PATH}”
+//	env.PATH = "${tfHome}"
+	echo $tfHome
  	}
 	sh 'terraform -version'
 	}
