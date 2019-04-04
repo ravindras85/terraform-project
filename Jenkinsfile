@@ -11,9 +11,9 @@ pipeline {
    stage('Set Terraform path') {
 	steps {
 	script {
-	def tfHome = tool name: 'terraform'
+	def tfHome = tool name: 'terraform', type: 'org.jenkinsci.plugins.terraform.TerraformInstallation'
 //	env.PATH = "${tfHome}"
-	sh "terraform -version"
+	sh "$tfHome -version"
 	}
        }
      } 
