@@ -8,7 +8,7 @@ pipeline {
        }
       }
 
-   stage('Set Terraform path') {
+   stage('Verify Terraform') {
 	steps {
 //	def tfHome = tool name: 'terraform', type: 'org.jenkinsci.plugins.terraform.TerraformInstallation'
 //	env.PATH = "${tfHome}"
