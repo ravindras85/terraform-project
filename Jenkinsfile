@@ -1,3 +1,4 @@
+def foo = "foo"
 pipeline {
  agent any
  
@@ -8,6 +9,10 @@ pipeline {
        }
       }
 
+ stage {'for testing')
+        sh "echo ${foo}"
+      }
+	 
    stage('Verify Terraform') {
 	steps {
 //	def tfHome = tool name: 'terraform', type: 'org.jenkinsci.plugins.terraform.TerraformInstallation'
