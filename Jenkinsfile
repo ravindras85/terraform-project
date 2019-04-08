@@ -1,4 +1,4 @@
-def tfhome = tool name: 'terraform', type: 'org.jenkinsci.plugins.terraform.TerraformInstallation
+def tfhome = 'tool name: 'terraform', type: 'org.jenkinsci.plugins.terraform.TerraformInstallation'
 pipeline {
  agent any
  
