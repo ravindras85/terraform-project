@@ -1,4 +1,4 @@
-def foo = "foo"
+def tfhome = tool name: 'terraform', type: 'org.jenkinsci.plugins.terraform.TerraformInstallation
 pipeline {
  agent any
  
@@ -18,7 +18,7 @@ pipeline {
 	steps {
 //	def tfHome = tool name: 'terraform', type: 'org.jenkinsci.plugins.terraform.TerraformInstallation'
 //	env.PATH = "${tfHome}"
-	  sh "/usr/local/bin/terraform -version"
+	  sh "$tfhome -version"
 	}
      } 
 }
