@@ -9,7 +9,7 @@ pipeline {
        }
       }
 
- stage ('for testing')
+   stage ('for testing') {
         sh "echo ${foo}"
       }
 	 
